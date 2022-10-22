@@ -4,7 +4,7 @@ import requests
 import pandas as pd
 from datetime import datetime
 
-url_list = pd.read_excel('/mnt/c/Users/jassim/Desktop/python/pagespeed_automation/urls.xlsx')
+url_list = pd.read_excel('/home/jassim/Desktop/pagespeed_automation/urls.xlsx')
 device = 'mobile' #Select here device it can be mobile or desktop
 category = 'performance'
 today = datetime.now().strftime('%m-%d-%Y')
@@ -84,7 +84,7 @@ def webtest(url_list,device,category,today,testtime):
 ## CSV Generator
     
 def CSV(df):
-    df.to_csv('/mnt/c/Users/jassim/Desktop/python/pagespeed_automation/results.csv', mode='a', header=False)
+    df.to_csv('/home/jassim/Desktop/pagespeed_automation/results.csv', mode='a', header=False)
     
 
 webtest(url_list, device, category, today, testtime)
